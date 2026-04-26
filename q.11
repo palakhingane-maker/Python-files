@@ -1,0 +1,27 @@
+class Library:
+    def __init__(self, book_name, author, availability=True):
+        self.book_name = book_name
+        self.author = author
+        self.availabilty = availability
+
+    def checkout(self):
+        if self.availabilty:
+            self.availibity = False
+            print( self.book_name, "has been checked out")
+        else:
+            print(self.book_name, "is not available")
+
+    def return_book(self):
+        self.availibilty = True
+        print( self.book_name, "has been returned")
+
+    def status(self):
+        status = "Available" if self.availibility else "Not Available"
+        print("Book:", self.book_name)
+        print("Author:", self.author)
+        print("Status:", status)
+
+book1 = Library("Python Programming", "John Smith")
+book2 = Library("Data Structures", "Mark Lee", False)
+
+
