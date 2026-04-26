@@ -1,0 +1,43 @@
+class Bank_account:
+    def __init__ (self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
+
+
+# Method to deposit money
+    def deposit(self, amount):
+        self.balance += amount
+        print("Amount deposited:", amount)
+
+
+ # Method to withdraw money
+    def withdraw(self,amount):
+        if amount > self.balance:
+            print("Insufficient balance !")
+        else:
+            self.balance -= amount
+            print("Amount withdrawn :", amount)
+
+
+# Method to check balance
+    def check_balance(self):
+        print("Current balance:", self.balance)
+
+
+# Creating an object
+account1 = Bank_account(125674, 1000)
+
+
+# Using methods
+account1.deposit(500)
+account1.withdraw(300)
+account1.check_balance()
+
+
+
+
+
+        
+
+
+        
